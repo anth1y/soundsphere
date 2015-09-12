@@ -2,13 +2,14 @@
 <%= form_for @track do |f| %>
   <%= f.text_field :title, placeholder: 'title' %>
   <%= f.text_field :artist, placeholder: 'artist' %>
+  <%= f.file_field :file %>
   <%= f.submit :"Create" %>
   <%= notice %>
 <%end%>
 <ul> <% @alltracks.each do |t| %>
-   <li> 
-     <%= t.title %> 
-     <%= t.artist %> 
+   <li>
+     <%= t.title %>
+     <%= t.artist %>
   </li>
 
      <%end%>
