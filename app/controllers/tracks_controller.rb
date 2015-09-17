@@ -10,5 +10,12 @@ class TracksController < ApplicationController
   def track_params
     params.require(:track).permit(:title, :artist)
   end
-
+  def upload
+    uploaded_io = params[:track][:file]
+    File.open(Rails.root.join('public', 'uploads',
+    uploaded_io.original_filename), 'wb') do |f|
+    f.write(uploaded_io.read)
+    end
+  end
 end
+
