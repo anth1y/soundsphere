@@ -10,11 +10,10 @@
    <li>
      <%= t.title %>
      <%= t.artist %>
+      <audio controls>
+        <source src="/<%= t.file %>" type="audio/mp3"/>
+      </audio>
   </li>
 
      <%end%>
 </ul>
-<audio id="audio">
-  <source src="/" type="audio/ogg"/>
-  <source src="/" type="audio/mp3"/>
-</audio>
